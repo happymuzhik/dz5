@@ -1,0 +1,78 @@
+html, html * {
+	font-size: 10pt;
+	line-height: 10pt;
+	font-family: sans-serif;
+	box-sizing: border-box;
+}
+.wrapper{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #FFF;
+}
+.accordion-cont{
+	width: 400px;
+	margin: auto;
+}
+.accordion-logo {
+    background-image: url("../img/accordeon-logo.png");
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: initial;
+    background-position: center;
+}
+.accordion-block{
+	width: 400px;
+	background-color: #E7E7E7;
+	border-radius: 17px;
+	margin-bottom: 5px;
+	overflow: hidden;
+	height: 35px;
+	-webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+/*.accordion-block.active{
+	height: initial;
+}*/
+.accordion-block.active:before{
+	background-image: url("../img/accordeon-arrow-up.png");
+}
+.accordion-block.active .accordion-header, .accordion-block.active:nth-child(2n+1) .accordion-header{
+	color: #FFF;
+	background-color: #FF8663;
+}
+.accordion-block:nth-child(2n+1) .accordion-header{
+	background-color: #696666;
+	color: #FFF;
+}
+.accordion-block:before{
+    content: "";
+    position: absolute;
+    margin-top: 12px;
+    margin-left: 370px;
+    width: 14px;
+    height: 12px;
+    background-image: url("../img/accordeon-arrow-down.png");
+    background-repeat: no-repeat;
+    background-size: initial;
+    background-position: center;
+    cursor: pointer;
+}
+.accordion-header{
+	color: #4F4F4F;
+	padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    height: 35px;
+}
+.accordion-list{
+	background-color: #E7E7E7;
+	border-radius: 20px;
+    padding: 10px 20px;
+}
+.accordion-list-item{
+	padding: 5px;
+	color: #4F4F4F;
+}
